@@ -23,9 +23,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6jj8zf3zzvly-4xohlbg^fq=(%kmyln+25+0@(y8s_)8u_8%qa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+
 
 ALLOWED_HOSTS = ["*"]
+
+IN_DEVELOPMENT = False
+
+if IN_DEVELOPMENT:
+    DEBUG = True
+    STATICFILES_DIRS=[
+        os.path.join(BASE_DIR,'static')
+    ]
+else:
+    DEBUG = False
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Application definition
@@ -123,14 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 
-IN_DEVELOPMENT = False
 
-if IN_DEVELOPMENT:
-    STATICFILES_DIRS=[
-        os.path.join(BASE_DIR,'static')
-    ]
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL='/static/'
 
@@ -146,3 +150,6 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="ferreteriainoxidables@gmail.com"
 EMAIL_HOST_PASSWORD=""
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
