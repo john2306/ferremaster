@@ -1,0 +1,29 @@
+{% extends  "proyectoinoxidablesapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<br><br><br><br><br>
+
+<div class="contenedorForm " >
+
+    {% if "valido" in  request.GET %}
+
+        <p style="text-align: center;">la informacion fue enviada correctamente, Gracias</p>
+
+    {% endif %}
+
+
+    <form action="" method="POST" style="text-align: center ;">
+        {% csrf_token %}
+        <table style=" color: gray; margin:20px auto;  "  >{{miFormulario.as_table}}</table>
+        <input type="submit" value="Enviar" style="width: 150px;">
+    </form>
+
+
+
+</div>
+
+
+
+{% endblock %}

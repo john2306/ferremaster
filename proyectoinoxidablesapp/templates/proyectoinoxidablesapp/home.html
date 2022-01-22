@@ -1,0 +1,193 @@
+<html>
+  
+
+
+
+<body>
+
+
+
+{% extends  "proyectoinoxidablesapp/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+   <!-- Heading carrusel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2" ></li>
+
+
+  </ol>
+  <div class="carousel-inner">
+
+    {% for object in obj %}
+
+    <div class="carousel-item  {% if forloop.counter0 == 0%}active{% endif %}">
+      <img src="{{object.image.url}}"  style="height: 600px;" class="img-fluid d-block w-100" alt="...">
+
+        <div class="carousel-caption d-none d-md-block">
+          <h1  class="animate__animated 
+          {% if forloop.counter0 == 0 %}
+          animate__fadeInDown
+          {% endif %}
+          {% if forloop.revcounter == 1 %}
+          animate__slideInDown
+         
+          {% endif %}
+          {% if forloop.revcounter == 2 %}
+          animate__zoomIn
+          
+          {% endif %}
+          
+          
+          
+          "  >{{object.title}}</h1>
+          <h3 class="animate__animated animate__zoomIn">{{object.sub_title}}</h3>
+         <!-- <button class=" animate__animated animate__zoomIn mt-3 p-4 px-5  btn font-weight-bold">sobre  nosotros</button> -->
+        </div>
+      </div>
+      {% endfor %}
+     </div>
+    </div>
+
+                                     <!-- icono de wathsapp  -->
+
+    <div  class="iconowatsap"  > <a href="https://wa.link/51kvdl"   target="blank"><img src=" {% static 'proyectoinoxidablesapp/img/watlogo.png'%}" width="100"  alt=""  ></a> </div>
+
+                                         <!-- linea de productos iconos -->
+    <div >
+      <div><h1 id="title">Linea de productos</h1> 
+      <h5 class="contamos">Contamos con venta de tuberia en acero inoxidables, accesorios para pasamanos, accesorios para vidrio templado , vidrio templado, ventaneria en aluminios en todas las referncias   puertas en aluminio y acero inoxidables, fachadas extructuras y mas</h5></div>
+           
+       <div id="iconos">    
+           <div class="iconos1">
+             <a href="{% url 'residencial' %}"><img src=" {% static 'proyectoinoxidablesapp/img/RESI.png'%}" width="90"  alt=""></a>
+            
+           
+            </div>
+            
+             <div class="iconos2">
+              <a href="{% url 'industrial' %}"><img src=" {% static 'proyectoinoxidablesapp/img/INDU.png'%}" width="90" alt=""></a>
+              
+            
+             </div>
+             <div class="iconos3">
+              <a href="{% url 'hospitalaria' %}"><img src=" {% static 'proyectoinoxidablesapp/img/hospi.png'%}" width="90"  alt=""></a>
+             
+            
+             </div>
+             <div class="iconos4">
+              <a href="{% url 'veterinaria' %}"><img src=" {% static 'proyectoinoxidablesapp/img/VETE.png'%}" width="90"  alt=""></a>
+              
+            
+             </div>
+             <divb class="iconos5">
+              <a href="{% url 'imnovadora' %}"><img src=" {% static 'proyectoinoxidablesapp/img/IMNO.png'%}" width="90"  alt=""></a>
+              
+            </div>
+         </div>
+      
+        <!-- targetas de productos -->
+
+        <div class="targetasproyectos" >
+
+          <h1 class="titleproyectos">Proyectos</h1>
+        
+        <div class="card-deck" >
+          <div class="card">
+            <img class="card-img-top" src=" {% static 'proyectoinoxidablesapp/img/ROSA.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Cundinamarca</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src=" {% static 'proyectoinoxidablesapp/img/PERGOLA.jpeg'%}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{% static 'proyectoinoxidablesapp/img/CASABLANCA.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Bucaramanga</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0374952439693!2d-73.13444648474837!3d7.121652917895048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6815e209c1fba7%3A0xc1ad36583b8ab460!2sFerreteria%20inoxidables%20sas!5e0!3m2!1ses!2sco!4v1634240744829!5m2!1ses!2sco" width="1900" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="col-12  " ></iframe>
+
+   
+
+      
+        <div class="logo1"> <img src="{% static 'proyectoinoxidablesapp/img/instalogo.png'%} " alt="" width="50" height="50">
+        <h3> @ferreteriainox
+        </div>
+        <div class="logo1"> <img src="{% static 'proyectoinoxidablesapp/img/facelogo.png'%} " alt="" width="50" height="50">
+        <h3>@ferreteriainoxidables</h3>
+      </div>
+        
+        <div class="logo1"> <img src="{% static 'proyectoinoxidablesapp/img/sobre.png'%} " alt="" width="50" height="50">
+        <h3>ferreteriainoxidables@gmailcom</h3>
+        
+        </div>
+        
+        
+        <div class="logo1"> <img src="{% static 'proyectoinoxidablesapp/img/descarga.png'%} " alt="" width="50" height="50">
+        
+
+          <h3> 6422006  -    3223516725</h3>
+        
+        
+        </div>
+       
+      </div>
+
+
+    </div>
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+   
+{% endblock %}
+
+
+  
+
+
+
+    
+    <!-- Bootstrap -->
+   
+    <script src="{% static 'proyectoinoxidablesapp/vendor/jquery/jquery.min.js'  %}"></script>
+    <script src="{% static 'proyectoinoxidablesapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+
+</body>
+
+
+</html>

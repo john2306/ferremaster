@@ -1,0 +1,129 @@
+{% extends  "proyectoinoxidablesapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+   
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+      
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2" ></li>
+      
+      
+        </ol>
+        <div class="carousel-inner">
+      
+          {% for object in obj %}
+      
+          <div class="carousel-item  {% if forloop.counter0 == 0%}active{% endif %}">
+            <img src="{{object.image.url}}"  style="height: 400px; margin-top: 60px; " class="img-fluid d-block w-100" alt="...">
+      
+              <div class="carousel-caption d-none d-md-block">
+                <h1  class="animate__animated 
+                {% if forloop.counter0 == 0 %}
+                animate__fadeInDown
+                {% endif %}
+                {% if forloop.revcounter == 1 %}
+                animate__slideInDown
+               
+                {% endif %}
+                {% if forloop.revcounter == 2 %}
+                animate__zoomIn
+                
+                {% endif %}
+                
+                
+                
+                "  >{{object.title}}</h1>
+                <h3 class="animate__animated animate__zoomIn">{{object.sub_title}}</h3>
+               <!-- <button class=" animate__animated animate__zoomIn mt-3 p-4 px-5  btn font-weight-bold">sobre  nosotros</button> -->
+              </div>
+            </div>
+            {% endfor %}
+           </div>
+           
+          </div>
+
+
+
+
+    <div class="okproductos" >
+      <div class="row row-cols-auto">
+      <div class="resi">
+        <a href="residencial"><img src=" {% static 'proyectoinoxidablesapp/img/RESI.png'%}" width="200"  alt=""></a>
+        <ul><li><a href="residencial/"><h6>Puertas</h6></a> </li>
+          <li><a href="residencial/#sl4"><h6>Ventanas</h6></a> </li>
+          <li><a href="residencial/#sl7"><h6>Pasamanos</h6></a> </li>
+          <li><a href="residencial/#sl10"><h6>Rejas</h6> </a></li>
+          <li><a href="residencial/#sl13"><h6>Repisas</h6></a> </li>
+          <li><a href="residencial/#sl16"><h6>Diviciones de Baños</h6> </a></li>
+
+          
+        </ul>
+
+
+      </div>
+      <div class="indu">
+        <a href="industrial"><img src=" {% static 'proyectoinoxidablesapp/img/INDU.png'%}" width="200"  alt=""></a>
+        <ul><li> <a href="industrial/"><h6>Portones</h6> </a></li>
+          <li> <a href="industrial/#sl4"><h6>Cesta para basura</h6></a> </li>
+          <li> <a href="industrial/#sl7"><h6>Rejillas</h6></a></li>
+          <li> <a href="industrial/#sl10"><h6>Trampa para grasa</h6> </a></li>
+          <li> <a href="industrial/#sl13"><h6>Gabinetes</h6> </a></li>
+          <li> <a href="industrial/#sl16"><h6>Bateria de baño</h6></a></li>
+        </ul>
+
+
+      </div>
+      <div class="hospi" >
+        <a href="hospitalaria"><img src=" {% static 'proyectoinoxidablesapp/img/hospi.png'%}" width="200"  ></a>
+        <ul><li><a href="hospitalaria/"><h6>Atril hospitalario</h6> </a></li>
+          <li> <a href="hospitalaria/#sl4"><h6>Soporte de discapacitado</h6> </a></li>
+          <li><a href= "hospitalaria/#sl7"><h6>Pocetas</h6> </a></li>
+          <li> <a href="hospitalaria/#sl10"><h6>Lavamanos quirugico</h6></a> </li>
+          <li><a href= "hospitalaria/#sl13"><h6>Gabinetes</h6></a> </li>
+          <li><a href= "hospitalaria/#sl16"><h6>Mesa auxiliar</h6></a> </li>
+          
+          
+        
+
+
+      </div>
+      <div class="vete" >
+        <a href="veterinaria"><img src=" {% static 'proyectoinoxidablesapp/img/VETE.png'%}" width="200"  alt=""></a>
+        <ul>
+          <li><a href="veterinaria/"> <h6>  Mesa de cirugia</h6> </a></li>
+          <li><a href="veterinaria/#sl4 "> <h6>  Mesa de consultorio</h6></a> </li>
+          <li><a href="veterinaria/#sl7 "> <h6> Mesa de peluqueria</h6></a> </li>
+          <li><a href="veterinaria/#sl16"> <h6> Mesa auxiliar</h6> </a></li>
+          <li><a href="veterinaria/#sl13">  <h6>Bañera</h6> </a></li>
+          <li><a href="veterinaria/#sl10">  <h6>jaulas</h6></a> </li>
+        </ul>
+
+
+      </div>
+      <div class="imno">
+        <a href="imnovadora"><img src=" {% static 'proyectoinoxidablesapp/img/IMNO.png'%}" width="200"  alt=""></a>
+        <ul>
+          <li> <a href="imnovadora/"> <h6>Dispensadores de gel</h6></a> </li>
+          <li> <a href="imnovadora/#sl4"> <h6>Articulos para pisina</h6> </a></li>
+          <li> <a href="imnovadora/#sl7"> <h6>Barriles</h6> </a></li>
+          <li> <a href="imnovadora/#sl10"> <h6>Pergolas</h6> </a></li>
+          <li> <a href="imnovadora/#sl13"> <h6>Techos</h6></a> </li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+
+  
+
+
+{% endblock %}

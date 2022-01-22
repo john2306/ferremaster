@@ -1,0 +1,388 @@
+{% extends  "proyectoinoxidablesapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<div class="container-door" >
+
+   
+    
+   <ul class="slider1" >
+      
+      <li  class="hp"><a href="#gel1"><img src="{% static 'productos/img/gel1.jpg'%}" alt=""></a></li>
+      <li class="hp"><a href="#gel2"> <img src="{% static 'productos/img/gel2.jpg'%}" alt=""></a></li>
+      <li class="hp"><a href="#gel3"><img src="{% static 'productos/img/gel4.jpg'%} " alt=""></a></li>
+     
+
+   </ul>
+    
+</div>
+<div class="modal" id="gel1">
+   <h3>Dispensador de gel</h3>
+   <div class="imagen">
+       <a href="#gel3">&#60;</a>&nbsp;
+       <a href="#gel2"> <img src="{% static 'productos/img/gel1.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+       <a href="#gel2"> > </a>
+   </div>
+
+   <a class="cerrar" href="#">x</a>
+</div>
+<div class="modal" id="gel2">
+   <h3>Dispensador de gel</h3>
+   <div class="imagen">
+       <a href="#gel1">&#60;</a>&nbsp;
+       <a href="#gel3"> <img src="{% static 'productos/img/gel2.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+       <a href="#gel3"> > </a>
+   </div>
+
+   <a class="cerrar" href="#">x</a>
+</div>
+<div class="modal" id="gel3">
+   <h3>Dispensador de gel</h3>
+   <div class="imagen">
+       <a href="#gel2">&#60;</a>&nbsp;
+       <a href="#gel1"> <img src="{% static 'productos/img/gel3.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+       <a href="#gel1"> > </a>
+   </div>
+
+   <a class="cerrar" href="#">x</a>
+</div>
+
+ 
+  <div>
+
+   <ul class="menu-slider">
+      <li>DISPENSADOR DE GEL</li> &nbsp;&nbsp;
+      <li>
+         <a href="">1</a>
+      </li>
+      <li >
+        <a href="#sl2">2</a>
+     </li>
+     
+      </ul>
+ </div>  
+ <div>
+
+   <ul class="menu-lineas">
+   
+     
+     
+     <li>
+        <a href="#sl4">ARTICULOS PARA PISINA</a>
+     </li>
+     <li>
+      <a href="#sl7">BARRILES</a>
+     </li>
+     <li>
+      <a href="#sl10">PERGOLAS</a>
+      </li>
+      <li>
+         <a href="#sl13">TECHOS</a>
+      </li>
+   
+   
+   </ul>
+   </div>
+
+     
+
+   
+   
+   <div class="container-door" >
+
+   
+    
+      <ul class="slider1" id="sl4"  style="display: grid; grid-template-columns: 1fr 1fr; width:90%; justify-items: center;">
+         
+         <li  class="hp"><a href="#pis1"><img src="{% static 'productos/img/PISINA1.jpg'%}" alt=""></a></li>
+         <li class="hp"> <a href="#pis2"><img src="{% static 'productos/img/PISINA2.jpg'%}" alt=""></a></li>
+        
+   
+      </ul>
+     
+       
+       
+      
+   
+   </div>
+   <div class="modal" id="pis1">
+      <h3></h3>
+      <div class="imagen">
+          <a href="#pis2">&#60;</a>&nbsp;
+          <a href="#pis2"> <img src="{% static 'productos/img/PISINA1.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+          <a href="#pis2"> > </a>
+      </div>
+   
+      <a class="cerrar" href="#sl4">x</a>
+   </div>
+   <div class="modal" id="pis2">
+      <h3></h3>
+      <div class="imagen">
+          <a href="#pis1">&#60;</a>&nbsp;
+          <a href="#pis1"> <img src="{% static 'productos/img/PISINA2.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+          <a href="#pis1"> > </a>
+      </div>
+   
+      <a class="cerrar" href="#sl4">x</a>
+   </div>
+   
+   
+   <div>
+   
+      <ul class="menu-slider">
+         <li>ARTICULO PARA PISINA</li> &nbsp;&nbsp;
+    
+   </div>
+         
+     
+<div>
+
+         <ul class="menu-lineas">
+         
+            <li>
+               <a href="">DISPENSADOR DE GEL</a>
+            </li>
+           
+           <li>
+              <a href="#sl7">BARRILES</a>
+           </li>
+           <li>
+            <a href="#sl10">PERGOLAS</a>
+           </li>
+           <li>
+            <a href="#sl13">TECHOS</a>
+            </li>
+           
+         
+         
+         </ul>
+         </div>
+     
+ 
+      <div class="container-door" >
+
+   
+    
+         <ul class="slider1" id="sl7" >
+            
+            <li class="hp" ><a href="#bar1"><img src="{% static 'productos/img/BARRIL1.jpg'%}" alt=""></a></li>
+            <li class="hp"> <a href="#bar2"><img src="{% static 'productos/img/BARRIL2.jpg'%}" alt=""></a></li>
+            <li class="hp" ><a href="#bar3"><img src="{% static 'productos/img/BARRIL3.jpg'%}" alt=""></a></li>
+            
+      
+         </ul> 
+      </div>
+      <div class="modal" id="bar1">
+         <h3>Barriles</h3>
+         <div class="imagen">
+             <a href="#bar3">&#60;</a>&nbsp;
+             <a href="#bar2"> <img src="{% static 'productos/img/BARRIL1.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+             <a href="#bar2"> > </a>
+         </div>
+      
+         <a class="cerrar" href="#sl7">x</a>
+      </div>
+      <div class="modal" id="bar2">
+         <h3>Barriles</h3>
+         <div class="imagen">
+             <a href="#bar1">&#60;</a>&nbsp;
+             <a href="#bar3"> <img src="{% static 'productos/img/BARRIL2.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+             <a href="#bar3"> > </a>
+         </div>
+      
+         <a class="cerrar" href="#sl7">x</a>
+      </div>
+      <div class="modal" id="bar3">
+         <h3>Barriles</h3>
+         <div class="imagen">
+             <a href="#bar2">&#60;</a>&nbsp;
+             <a href="#bar1"> <img src="{% static 'productos/img/BARRIL3.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+             <a href="#bar1"> > </a>
+         </div>
+      
+         <a class="cerrar" href="#sl7">x</a>
+      </div>
+       
+         </div>
+      
+         <ul class="menu-slider">
+            <li>BARRILES</li> &nbsp;&nbsp;
+         
+               
+                 
+                  </ul>
+             </div>  
+          
+           
+           
+      
+         </ul>
+         <div>
+
+            <ul class="menu-lineas"><br>
+            
+               <li>
+                  <a href="">DISPENSADOR DE GEL</a>
+               </li>
+               <li>
+                 <a href="#sl4">ARTICULOS PARA PISINA</a>
+              </li>
+              <li>
+                 <a href="#sl10">PERGOLAS</a>
+              </li>
+              <li>
+               <a href="#sl13">TECHOS</a>
+              </li>
+           
+            </ul>
+            </div>
+
+ 
+
+         <div class="container-door" >
+
+   
+    
+            <ul class="slider1" id="sl10" >
+
+               <li  class="hp"><a href="#pergo1"><img src="{% static 'productos/img/PERGO2.jpg'%}" alt=""></a></li>
+               <li class="hp"><a href="#pergo2"> <img src="{% static 'productos/img/PERGO5.jpg'%}" alt=""></a></li>
+               <li class="hp" ><a href="#pergo3"><img src="{% static 'productos/img/PERGO6.jpg'%} " alt=""></a></li>
+             </ul>  
+       
+         </div>
+         
+          
+         <div class="modal" id="pergo1">
+            <h3>Pergolas</h3>
+            <div class="imagen">
+                <a href="#pergo3">&#60;</a>&nbsp;
+                <a href="#pergo2"> <img src="{% static 'productos/img/PERGO2.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+                <a href="#pergo2"> > </a>
+            </div>
+         
+            <a class="cerrar" href="#sl10">x</a>
+         </div>
+         <div class="modal" id="pergo2">
+            <h3>Pergolas</h3>
+            <div class="imagen">
+                <a href="#pergo1">&#60;</a>&nbsp;
+                <a href="#pergo3"> <img src="{% static 'productos/img/PERGO5.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+                <a href="#pergo3"> > </a>
+            </div>
+         
+            <a class="cerrar" href="#sl10">x</a>
+         </div>
+         <div class="modal" id="pergo3">
+            <h3>Pergolas</h3>
+            <div class="imagen">
+                <a href="#pergo2">&#60;</a>&nbsp;
+                <a href="#pergo1"> <img src="{% static 'productos/img/PERGO6.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+                <a href="#pergo1"> > </a>
+            </div>
+         
+            <a class="cerrar" href="#sl10">x</a>
+         </div>
+         
+            <ul class="menu-slider">
+               <li>PERGOLAS </li> &nbsp;&nbsp;
+              
+            </ul>
+            <div>
+
+               <ul class="menu-lineas"><br>
+               
+                  <li>
+                     <a href="">DISPENSADORES DE GEL </a>
+                  </li>
+                  <li>
+                    <a href="#sl4">ARTICULOS PARA PISINA</a>
+                 </li>
+                 <li>
+                    <a href="#sl7">BARRILES </a>
+                 </li>
+                 <li>
+                  <a href="#sl13">TECHOS</a>
+                 </li>
+               
+               
+               </ul>
+               </div>
+
+            <div class="container-door" >
+
+   
+    
+               <ul class="slider1" id="sl13" style="display: grid; grid-template-columns: 1fr 1fr; width:90%; justify-items: center;">
+                  
+                  <li  class="hp"><a href="#te1"><img src="{% static 'productos/img/TECHO1.jpg'%}" alt=""></a></li>
+                  <li class="hp"><a href="#te2"> <img src="{% static 'productos/img/TECHO2.jpg'%}" alt=""></a></li>
+                 
+            
+               </ul>
+              
+                
+               
+            </div>
+            
+             
+            <div class="modal" id="te1">
+               <h3>Techos</h3>
+               <div class="imagen">
+                   <a href="#te2">&#60;</a>&nbsp;
+                   <a href="#te2"> <img src="{% static 'productos/img/TECHO1.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+                   <a href="#te2"> > </a>
+               </div>
+            
+               <a class="cerrar" href="#sl13">x</a>
+            </div>
+            <div class="modal" id="te2">
+               <h3>Techos</h3>
+               <div class="imagen">
+                   <a href="#te1">&#60;</a>&nbsp;
+                   <a href="#te1"> <img src="{% static 'productos/img/TECHO2.jpg'%}" alt="" ></a>&nbsp;&nbsp;&nbsp;
+                   <a href="#te1"> > </a>
+               </div>
+            
+               <a class="cerrar" href="#sl13">x</a>
+            </div>
+            
+            
+               <ul class="menu-slider">
+                  <li>TECHOS
+                  
+                  
+                 
+            
+               </ul>
+               <div>
+
+                  <ul class="menu-lineas"><br>
+                  
+                     <li>
+                        <a href="">DISPENSADORES DE GEL</a>
+                     </li>
+                     <li>
+                       <a href="#sl4">ARTICULOS PARA PISINA</a>
+                    </li>
+                    <li>
+                       <a href="#sl7">BARRILES</a>
+                    </li>
+                    <li>
+                     <a href="#sl10">PERGOLAS</a>
+                    </li>
+                  
+                    
+                  
+                  
+                  </ul>
+                  </div>
+               
+
+{% endblock %}

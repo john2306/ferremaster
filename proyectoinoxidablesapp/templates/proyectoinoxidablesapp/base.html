@@ -1,0 +1,110 @@
+<html>
+
+<head>
+
+    {% load static %}
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+
+
+    <!-- Bootstrap -->
+    <link href="{% static 'proyectoinoxidablesapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+
+
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+
+    <!-- Styles -->
+    <link href="{% static 'proyectoinoxidablesapp/css/gestion.css' %}" rel="stylesheet">
+
+ 
+</head>
+
+
+
+<body>
+  <header>    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 " id="mainNav">
+   
+     
+       <div class="container">
+         <div><img src=" {% static 'proyectoinoxidablesapp/img/WEB2.png'%}" width="200"  alt=""></div>
+        
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+           <ul class="navbar-nav mx-auto">
+             <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
+               <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
+             </li>
+             <li class="nav-item {% if request.path == '/productos/' %}active{% endif %} px-lg-4">
+               <a class="nav-link text-uppercase text-expanded" href="{% url 'Productos' %}">Productos</a>
+             </li>
+             <li class="nav-item {% if request.path == '/proyectos/' %}active{% endif %} px-lg-4">
+               <a class="nav-link text-uppercase text-expanded" href="{% url 'Proyectos' %}">Proyectos</a>
+             </li>
+             
+             <li class="nav-item {% if request.path|slice:':6' == '/blog/' %}active{% endif %} px-lg-4">
+               <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
+             </li>
+             <li class="nav-item {% if request.path == '/contacto/' %}active{% endif %} px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
+            </li>
+            
+           </ul>
+           
+         </div>
+       </div>
+     </nav>
+   
+   </header>
+<!-- Contenido cambiante-->
+{% block content %} {% endblock %}
+
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	       
+	        <a href="https://www.facebook.com/ferreteriainoxidables/?ref=pages_you_manage" class="link" target="blank">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="https://www.instagram.com/ferreteriainoxidables/" class="link" target="blank">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	    </p>
+        <p class="m-0 mbt">
+        	<a href="sample.html" class="link">Política de privacidad</a> ·
+        	<a href="sample.html" class="link">Aviso legal</a> ·
+        	<a href="sample.html" class="link">Cookies</a>
+		</p>
+        <p class="m-0 mbt1">&copy; Ferreteria Inoxidables 2021</p>
+      </div>
+	</footer>
+
+ 
+
+    <!-- Bootstrap -->
+    <script src="{% static 'proyectoinoxidablesapp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'proyectoinoxidablesapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	 
+</body>
+
+
+</html>
